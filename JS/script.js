@@ -1,62 +1,32 @@
-// ----------INPUTS-----------
-let inputName = document.getElementById("nome").value
-let inputKm = document.getElementById("km").value
-let age = document.getElementById("ageUser").value
-const selectAge = age
 
+let form = document.getElementById("ticketForm")
 
-//--------- ELEMENTS----------
-let userName = inputName
-let trip = inputKm
-const kmPrice = 0.21
-let price =  parseFloat ((trip * kmPrice).toFixed(2))
-const form = document.getElementById("ticketForm")
-// const price = parseFloat ((trip * kmPrice).toFixed(2))
-// const oldPrice = parseFloat ((price * 0.6).toFixed(2))
-// const babyPrice = parseFloat ((price * 0.8).toFixed(2))
-
-
-//---------BUTTONS---------
-const btnCheck = document.getElementById("btn1")
-
-
-
-function priceMaker(){
-  if(selectAge === "baby"){
-    price = parseFloat ((price * 0.8).toFixed(2))
-    console.log(price);
-
-  }else if(selectAge === "normal"){
-    price = parseFloat ((trip * kmPrice).toFixed(2))
-    console.log(price);
-
-  }else if(selectAge === "old"){
-    price = parseFloat ((price * 0.6).toFixed(2))
-    console.log(price);
+function priceMaker() {
+  const inputName = document.getElementById("name").value;
+  const inputKm = document.getElementById("km").value;
+  const age = document.getElementById("ageUser").value;
+  
+  const trip = parseFloat(inputKm);
+  const kmPrice = 0.21;
+  let price = parseFloat((trip * kmPrice).toFixed(2));
+  
+  if (age === "baby") {
+    price *= 0.8;
+  } else if (age === "old") {
+    price *= 0.6;
   }
-  btnCheck.removeEventListener("click", handleClick);
+  
+  console.log("Il prezzo del viaggio è:", price.toFixed(2));
+
+  form.reset();
 }
 
-btnCheck.addEventListener("click", handleClick);
-
-function handleClick() {
-
-  priceMaker();
-
-  inputKm.value = ""
-  inputName.value = ""
-  age.value = ""
-
-  btnCheck.addEventListener("click", handleClick);
-};
+// svolgo la funzione priceMaker e resetto il form
 
 
 
-// function handleClick(){
+const btnCheck = document.getElementById("btn1");
 
-//   function priceMaker();
-
-//   btnCheck.addEventListener("click", handleClick);
-// }
+btnCheck.addEventListener("click", priceMaker);
 
 

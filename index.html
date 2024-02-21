@@ -8,28 +8,28 @@
   <title>Document</title>
 </head>
 <body>
-  ciao
-  <form action="#" id="ticketForm" class="form-control ">
+  <div class="container">
+    <form action="#" id="ticketForm" class="form-control ">
 
-    <input type="text" id="nome">
-    <label for="nome">Inserisci il nome</label>
+      <input type="text" id="name">
+      <label for="nome">Inserisci il nome</label>
 
-    <input type="text" id="km" pattern="^[0-9]+$">
-    <label for="nome">Inserisci i km</label>
+      <input type="text" id="km" pattern="^[0-9]+$">
+      <label for="nome">Inserisci i km</label>
 
-    <select class="form-select mt-2 " id="ageUser">
-      <option selected>Fascia d' età</option>
-      <option value="baby">Minorenne</option>
-      <option value="normal">Maggiorenne</option>
-      <option value="old">Over65</option>
-    </select>
+      <select class="form-select mt-2 " id="ageUser">
+        <option selected>Fascia d' età</option>
+        <option value="baby">Minorenne</option>
+        <option value="normal">Maggiorenne</option>
+        <option value="old">Over65</option>
+      </select>
 
-    <button id="btn1" class="btn bg-primary text-white m-3 ">calcola</button>
+      <button id="btn1" class="btn bg-primary text-white m-3 ">calcola</button>
 
-    <button type="reset" class="btn bg-body-secondary m-3 ">reset</button>
+    </form>
 
-  </form>
-  <button>ciao</button>
+    
+  </div>
 
 <script src="JS/script.js"></script>
 </body>
