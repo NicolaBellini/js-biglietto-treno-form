@@ -3,6 +3,7 @@ let form = document.getElementById("ticketForm")
 let cost = document.getElementById("ticketPrice")
 let offerType = document.getElementById("offertype")
 let nameOnTicket = document.getElementById("ticket-name")
+let popUpTicket = document.getElementById("ticket")
 
 function priceMaker() {
   const inputName = document.getElementById("name").value;
@@ -21,6 +22,8 @@ function priceMaker() {
   }
   
   console.log("Il prezzo del viaggio è:", price.toFixed(2));
+
+  popUpTicket.classList.remove("d-none")
 
   nameOnTicket.innerHTML = inputName
   offerType.innerHTML = age
