@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.debug{
+  background-color: rgba(0, 139, 139, 0.38);
+  border: 1px solid gold;
+}
+
+.ticket{
+  height: 150px;
+  margin-bottom: 100px;
+}
+
+.ticket-body{
+  height:100px;
+}
+
+.offer{
+  height: 100%;
+}
