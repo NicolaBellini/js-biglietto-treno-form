@@ -7,7 +7,7 @@ let popUpTicket = document.getElementById("ticket")
 
 function priceMaker() {
   const inputName = document.getElementById("name").value;
-  const inputKm = document.getElementById("km").value;
+  const inputKm = parseInt(document.getElementById("km").value);
   const age = document.getElementById("ageUser").value;
 
   
