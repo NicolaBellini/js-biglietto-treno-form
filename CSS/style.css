@@ -4,20 +4,46 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color:teal ;
+}
+
+.container{
+  height: 100vh;
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+}
+
 .debug{
   background-color: rgba(0, 139, 139, 0.38);
   border: 1px solid gold;
 }
 
-.ticket{
-  height: 150px;
+.my-form{
+  max-width: 800px;
+  background-color: chocolate;
+}
+
+
+.my-ticket{
+  margin-top: 50px;
   margin-bottom: 100px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: chocolate;
 }
 
-.ticket-body{
-  height:100px;
+
+
+
+.pass-name{
+  border-top: 3px solid teal;
 }
 
-.offer{
-  height: 100%;
+
+.offer, .cost{
+  /* margin: 0 50px; */
+  border-top: 3px solid teal;
 }
+

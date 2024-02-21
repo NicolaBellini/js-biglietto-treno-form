@@ -13,41 +13,46 @@
   <div class="container">
     <form action="#" id="ticketForm" class="mt-4 mb-4   form-control my-form debug">
 
-      <input type="text" id="name">
+      <input type="text" id="name" placeholder="name" class="p-2 ">
       <label for="nome">Inserisci il nome</label>
 
-      <input type="text" id="km" pattern="^[0-9]+$">
+      <input type="text" id="km" pattern="^[0-9]+$" placeholder="km" class="p-2 ">
       <label for="nome">Inserisci i km</label>
 
-      <select class="form-select mt-2 " id="ageUser">
+      <select class="form-select mt-2 p-2 " id="ageUser" required>
         <option selected>Fascia d' età</option>
         <option value="Young">Minorenne</option>
         <option value="Normal">Maggiorenne</option>
         <option value="Senior">Over65</option>
       </select>
 
-      <button id="btn1" class="btn bg-primary text-white m-3 ">Go to price</button>
+      <button id="btn1" class="btn btn-outline-light  m-3 ">Go to price</button>
 
     </form>
-
-    <div id="ticket" class="ticket debug d-none">
+ 
+    <!-- TODO:RICORDATI DI METTERE D-NONE A TICKET -->
+    <div id="ticket" class="my-ticket conta text-white  d-flex flex-column col-md-12  d-none"> 
       <h2>DETTAGLI PASSEGGERO</h2>
-      <div class="ticket-body d-flex debuug">
-        <div class="pass-name w-25 d-flex flex-column justify-content-around  align-items-center  debug  ">
-          <h5>Nome Passeggero</h5>
-          <p id="ticket-name">Passeggero</p>
-        </div>
-        <div class="pass-details w-75 d-flex   debug">
-          <div class="offer d-flex flex-column justify-content-between align-items-center  col debug">
+      <div class="container-fluid d-flex flex-md-column justify-content-center col-md-12   ">
+        <div class="ticket-body d-flex flex-column flex-md-row justify-content-center  ">
+
+          <div class="pass-name col-12  col-md-3   d-flex flex-column justify-content-around  align-items-center">
+            <h5>Nome Passeggero</h5>
+            <p id="ticket-name">Passeggero</p>
+          </div>
+         
+          <div class="offer d-flex flex-column justify-content-between align-items-center  col-12 col-md-6  ">
             <h4>OFFERTA</h4>
             <p id="offertype">Standard</p>
           </div>
-          <div id="ticketCost" class="cost d-flex flex-column justify-content-between align-items-center  col debug">
+
+          <div id="ticketCost" class="cost d-flex flex-column justify-content-between align-items-center col-12  col-md-3 ">
             <h4 id="">COSTO</h4>
             <p id="ticketPrice">0.00 euro</p>
           </div>
-        </div>
+         
 
+        </div>
       </div>
     </div>
   </div>
